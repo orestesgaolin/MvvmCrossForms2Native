@@ -17,7 +17,6 @@ namespace MvvmCrossFormsEmbedding.Droid.Views
 
         protected override void OnCreate(Bundle bundle)
         {
-			Forms.Init(this, null);
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.activity_settings);
             var toolbar = FindViewById<Toolbar>(Resource.Id.layout_toolbar);
@@ -25,6 +24,7 @@ namespace MvvmCrossFormsEmbedding.Droid.Views
             Instance = this;
 
             // #1 Initialize
+			Forms.Init(this, null);
 
             //// #2 Use it
             var frag = new SettingsView().CreateFragment(this);

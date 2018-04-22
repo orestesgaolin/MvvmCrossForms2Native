@@ -25,7 +25,7 @@ namespace MvvmCrossFormsEmbedding.Droid.Views
 
             var mvxFormsApp = new MyMvxFormsApplication();
             MvxFormsAndroidViewPresenter presenter = Mvx.Resolve<IMvxViewPresenter>() as MvxFormsAndroidViewPresenter;
-            presenter.FormsApplication = mvxFormsApp;
+            //presenter.FormsApplication = mvxFormsApp;
         }
     }
 

@@ -4,22 +4,15 @@ using MvvmCross.Platforms.Android.Presenters;
 using MvvmCross.Presenters;
 using MvvmCrossFormsEmbedding.Core;
 using MvvmCross.Forms.Platforms.Android.Presenters;
-using MvvmCrossFormsEmbedding.Droid.Views;
+using System.Collections.Generic;
+using System.Reflection;
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.Android;
+using MvvmCross.Forms.Core;
+using MvvmCrossFormsEmbedding.Droid.Views;
 
 namespace MvvmCrossFormsEmbedding.Droid
 {
     public class Setup : MvxAppCompatSetup<App>
     {
-        protected override IMvxAndroidViewPresenter CreateViewPresenter()
-        {
-            base.CreateViewPresenter();
-            var presenter = new MvxFormsAndroidViewPresenter(GetViewAssemblies(), new MyMvxFormsApplication());
-            Mvx.RegisterSingleton<IMvxViewPresenter>(presenter);
-
-            return presenter;
-        }
-
     }
 }
